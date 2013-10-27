@@ -33,6 +33,10 @@ DAEMON_OPTS="$DAEMON_OPTS --keyFile /etc/mongodb.key"
 DAEMON_OPTS="$DAEMON_OPTS --oplogSize <%= node[:mongodb][:oplog_size] %>"
 <% end %>
 
+<% if node[:mongodb][:auth] %>
+DAEMON_OPTS="$DAEMON_OPTS --auth"
+<% end %>
+
 <% if @enable_rest %>
 DAEMON_OPTS="$DAEMON_OPTS --rest"
 <% end %>
