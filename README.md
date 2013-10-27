@@ -59,7 +59,8 @@ For examples see the USAGE section below.
 * `mongodb[:replicaset_name]` - Define name of replicatset
 * `mongodb[:mms_agent][:api_key]` - MMS Agent API Key
 * `mongodb[:mms_agent][:secret_key]` - MMS Agent API Key
-* `mongodb[:auth]` - Set to true to [enable](http://docs.mongodb.org/manual/reference/program/mongod/#cmdoption--auth) authentication. 
+* `mongodb[:auth]` - Set to true to [enable](http://docs.mongodb.org/manual/reference/program/mongod/#cmdoption--auth) authentication.
+* `mongodb[:key_file]` - Set content of a [keyFile](http://docs.mongodb.org/manual/reference/configuration-options/#keyFile) and adds --keyFile option pointing at this file. Defaults to nil, and then --keyFile is not added to the mongod parameters on startup.
 
 # USAGE:
 
